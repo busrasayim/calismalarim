@@ -1,0 +1,21 @@
+﻿@*Html Helper Methods*@
+
+@helper CreateActionLink(string controller, string action, string text,string buttonCssName,string iconCssName)
+{
+
+    <a href="/@controller/@action" class="btn btn-@buttonCssName">
+        <span class="glyphicon glyphicon-@iconCssName"></span>&nbsp;
+        @text
+    </a>
+
+}
+
+@helper CreateActionLink(string controller, string action, string id, string text, string buttonCssName, string iconCssName)
+{
+
+    <a href="/@controller/@action/@id" class="btn btn-@buttonCssName">
+        <span class="glyphicon glyphicon-@iconCssName"></span>&nbsp;
+        @text
+    </a>
+
+}

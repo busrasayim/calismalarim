@@ -1,0 +1,113 @@
+﻿
+@{
+    Layout = null;
+}
+
+<!DOCTYPE html>
+
+<html>
+<head>
+    <meta name="viewport" content="width=device-width" />
+    <link href="~/Content/bootstrap.min.css" rel="stylesheet" />
+    <script src="~/Scripts/jquery-2.2.0.min.js"></script>
+    <script src="~/Scripts/bootstrap.min.js"></script>
+    <title>Index</title>
+
+    <script>
+
+        $(function () {
+
+            $("#btnAdd").click(function () {
+
+                var task = $("#txtTask").val();
+
+
+
+            })
+
+        })
+
+    </script>
+
+
+</head>
+<body>
+    @*.container>(h2>{My ToDo List})+(hr)+(.row>(.col-md-2>input[type=text id=txtTask placeholder=task class="form-control" maxlength=40])+(.col-md-10>button[type=button id=btnAdd class="btn btn-success"]>span[class="glyphicon glyphicon-plus"]+{&nbsp;Add}))+(hr)+(.row>.col-md-8>ul.list-group>li.list-group-item*3>(button[class="btn btn-warning"]>span[class="glyphicon glyphicon-edit"]+{&nbsp;Edit})+(button[class="btn btn-danger"]>span[class="glyphicon glyphicon-remove"]+{&nbsp;Del})+(button[class="btn btn-success"]>span[class="glyphicon glyphicon-ok"]+{&nbsp;OK})+(span>lorem3))*@
+
+    <div class="container">
+        <h2>
+            My ToDo List
+        </h2>
+        <hr />
+        <div class="row">
+
+            <div class="col-md-2">
+
+                <input type="text" id="txtTask" placeholder="task" class="form-control" maxlength="40" />
+
+            </div>
+
+            <div class="col-md-10">
+                <button type="button" id="btnAdd" class="btn btn-success">
+                    <span class="glyphicon glyphicon-plus"></span>&nbsp;Add
+                </button>
+            </div>
+
+        </div>
+        <hr />
+        <div class="row">
+            <div class="col-md-8">
+                <ul class="list-group">
+                    <!-- li.list-group-item*3>(button[class="btn btn-warning"]>span[class="glyphicon glyphicon-edit"]+{Edit})+(button[class="btn btn-danger"]>span[class="glyphicon glyphicon-remove"]+{Del})+(button[class="btn btn-success"]>span[class="glyphicon glyphicon-ok"]+{OK})+(span>lorem3) -->
+
+                    <li class="list-group-item">
+                        <button type="button" class="btn btn-warning">
+                            <span class="glyphicon glyphicon-edit"></span>
+                            Edit
+                        </button>
+                        <button type="button" class="btn btn-danger">
+                            <span class="glyphicon glyphicon-remove"></span>
+                            Del
+                        </button>
+                        <button class="btn btn-success">
+                            <span class="glyphicon glyphicon-ok"></span>
+                            OK
+                        </button>
+                        <span>Sit amet, consectetur.</span>
+                    </li>
+                    <li class="list-group-item">
+                        <button class="btn btn-warning">
+                            <span class="glyphicon glyphicon-edit"></span>
+                            Edit
+                        </button>
+                        <button class="btn btn-danger">
+                            <span class="glyphicon glyphicon-remove"></span>
+                            Del
+                        </button>
+                        <button class="btn btn-success">
+                            <span class="glyphicon glyphicon-ok"></span>
+                            OK
+                        </button>
+                        <span>Sit amet, consectetur.</span>
+                    </li>
+                    <li class="list-group-item">
+                        <button class="btn btn-warning">
+                            <span class="glyphicon glyphicon-edit"></span>
+                            Edit
+                        </button>
+                        <button class="btn btn-danger">
+                            <span class="glyphicon glyphicon-remove"></span>
+                            Del
+                        </button>
+                        <button class="btn btn-success">
+                            <span class="glyphicon glyphicon-ok"></span>
+                            OK
+                        </button>
+                        <span>Sit amet, consectetur.</span>
+                    </li>
+                </ul>
+            </div>
+        </div>
+    </div>
+</body>
+</html>

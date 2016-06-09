@@ -1,0 +1,9 @@
+C:\Users\Nurullah\Desktop\ready\winAjanda\winAjanda\bin\Debug\winAjanda.exe.config
+C:\Users\Nurullah\Desktop\ready\winAjanda\winAjanda\bin\Debug\winAjanda.exe
+C:\Users\Nurullah\Desktop\ready\winAjanda\winAjanda\bin\Debug\winAjanda.pdb
+C:\Users\Nurullah\Desktop\ready\winAjanda\winAjanda\obj\Debug\winAjanda.csprojResolveAssemblyReference.cache
+C:\Users\Nurullah\Desktop\ready\winAjanda\winAjanda\obj\Debug\winAjanda.Form1.resources
+C:\Users\Nurullah\Desktop\ready\winAjanda\winAjanda\obj\Debug\winAjanda.Properties.Resources.resources
+C:\Users\Nurullah\Desktop\ready\winAjanda\winAjanda\obj\Debug\winAjanda.csproj.GenerateResource.Cache
+C:\Users\Nurullah\Desktop\ready\winAjanda\winAjanda\obj\Debug\winAjanda.exe
+C:\Users\Nurullah\Desktop\ready\winAjanda\winAjanda\obj\Debug\winAjanda.pdb

@@ -1,0 +1,33 @@
+﻿@model MvcTodoList2.Models.TaskItem
+
+@{
+    ViewBag.Title = "AddTask";
+    Layout = "~/Views/Shared/_Layout1.cshtml";
+}
+
+<h2>Add Task</h2>
+<hr />
+
+@using (Html.BeginForm())
+{
+    <div class="row">
+
+        <div class="col-md-4 col-md-offset-4">
+
+            <div class="form-group">
+
+                @Html.TextBoxFor(x => x.Description, new { @class = "form-control", placeholder = "task detail" })
+
+            </div>
+
+            <div class="form-group">
+
+                <input type="submit" value="Add" class="btn btn-success" />
+
+            </div>
+
+
+        </div>
+
+    </div>
+}

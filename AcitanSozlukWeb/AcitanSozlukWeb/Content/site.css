@@ -1,0 +1,72 @@
+﻿body {
+    font-family: 'Trebuchet MS', 'Lucida Sans Unicode', 'Lucida Grande', 'Lucida Sans', Arial, sans-serif;
+}
+
+#footer > div {
+    height: 75px;
+    background-color: #ddd;
+    border-top-width: 3px;
+    border-top-style: solid;
+    border-top-color: #b2b2b2;
+    line-height: 75px;
+    vertical-align: middle;
+    font-weight: bold;
+    color: dimgray;
+}
+
+#content {
+    padding-top: 70px;
+    padding-left: 20px;
+    padding-right: 20px;
+}
+
+#forget_password .form-group,
+#login .form-group,
+#register .form-group,
+#add_article .form-group {
+    padding-bottom: 30px;
+}
+
+    #forget_password .form-group label,
+    #login .form-group label,
+    #register .form-group label,
+    #add_article .form-group label {
+        padding-top: 7px;
+    }
+
+.discoloration02 {
+    opacity: 0.2;
+}
+
+.discoloration05 {
+    opacity: 0.5;
+}
+
+.discoloration07 {
+    opacity: 0.7;
+}
+
+.article-heading {
+    height: 61px;
+}
+
+.article-content {
+    height: 80px;
+}
+
+.article-footer {
+    height: 61px;
+}
+
+.article-info
+{
+    color:#989898;
+}
+.article-info span{
+    font-weight:bold;
+}
+
+.validation-summary-errors ul li{
+    list-style: none;
+    color: #a94442;
+}

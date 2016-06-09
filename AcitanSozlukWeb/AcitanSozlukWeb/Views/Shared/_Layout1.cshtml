@@ -1,0 +1,162 @@
+﻿<!DOCTYPE html>
+
+<html>
+<head>
+    <meta name="viewport" content="width=device-width" />
+    <title>@ViewBag.Title</title>
+    <link href="~/Content/bootstrap.min.css" rel="stylesheet" />
+    <link href="~/Content/hint.min.css" rel="stylesheet" />
+    <link href="~/Content/sweetalert.css" rel="stylesheet" />
+    <link href="~/Content/site.css" rel="stylesheet" />
+    <script src="~/Scripts/jquery-2.2.3.min.js"></script>
+    <script src="~/Scripts/jquery.validate.min.js"></script>
+    <script src="~/Scripts/jquery.validate.unobtrusive.min.js"></script>
+    <script src="~/Scripts/bootstrap.min.js"></script>
+    <script src="~/Scripts/sweet_alert/sweetalert.min.js"></script>
+
+</head>
+<body>
+    <div id="header">
+
+        <nav class="navbar navbar-default navbar-fixed-top">
+            <div class="container-fluid">
+
+                <div class="navbar-header">
+                    <button type="button" class="navbar-toggle collapsed" data-toggle="collapse" data-target="#menu" aria-expanded="false">
+                        <span class="sr-only">Toggle navigation</span>
+                        <span class="icon-bar"></span>
+                        <span class="icon-bar"></span>
+                        <span class="icon-bar"></span>
+                    </button>
+                    <a class="navbar-brand text-uppercase" href="/Home/AnaSayfa">Acıtan Sözlük</a>
+                </div>
+
+                <!-- Collect the nav links, forms, and other content for toggling -->
+                <div class="collapse navbar-collapse" id="menu">
+                    <ul class="nav navbar-nav">
+                        <li><a href="/Article/AddArticle">Yazı Ekle</a></li>
+                        <li><a href="/Article/PopularArticles">Popüler Yazılar</a></li>
+                        <li><a href="/Article/NonPopularArticles">Popüler Olmayan Yazılar</a></li>
+                    </ul>
+
+                    <ul class="nav navbar-nav navbar-right">
+                        <li>
+                            <a href="/Login/SignUp">
+                                <span class="glyphicon glyphicon-user"></span>&nbsp;
+                                Sign Up
+                            </a>
+                        </li>
+                        <li>
+                            <a href="/Login/Login">
+                                <span class="glyphicon glyphicon-log-in"></span>&nbsp;
+                                Login
+                            </a>
+                        </li>
+                    </ul>
+                </div><!-- /.navbar-collapse -->
+            </div><!-- /.container-fluid -->
+        </nav>
+
+    </div>
+
+    <div id="content">
+
+        <div class="row">
+
+            <div class="col-md-9">
+                @RenderBody()
+            </div>
+            <div class="col-md-3">
+
+                <div class="panel panel-success">
+
+                    <div class="panel-heading">
+                        <span class="glyphicon glyphicon-thumbs-up"></span>&nbsp;
+                        <b>Popüler Yazılar</b>
+                    </div>
+
+                    <div class="panel-body">
+
+                        <ul class="list-group">
+
+                            <li class="list-group-item">
+                                <a href="#">Consectetur adipiscing elit fusce vel.</a>
+                            </li>
+                            <li class="list-group-item">
+                                <a href="#">Sapien elit in malesuada semper.</a>
+                            </li>
+                            <li class="list-group-item">
+                                <a href="#">Mi, id sollicitudin urna fermentum.</a>
+                            </li>
+                            <li class="list-group-item">
+                                <a href="#">Ut fusce varius nisl ac.</a>
+                            </li>
+                            <li class="list-group-item">
+                                <a href="#">Ipsum gravida vel pretium tellus.</a>
+                            </li>
+
+                        </ul>
+
+                    </div>
+
+                    <div class="panel-footer text-center">
+                        <a href="#" class="btn btn-success">
+                            <span class="glyphicon glyphicon-list-alt"></span>&nbsp;
+                            Tüm Yazılar
+                        </a>
+                    </div>
+
+                </div>
+
+                <div class="panel panel-danger">
+
+                    <div class="panel-heading">
+                        <span class="glyphicon glyphicon-thumbs-down"></span>&nbsp;
+                        <b>Popüler Olmayan Yazılar</b>
+                    </div>
+
+                    <div class="panel-body">
+
+                        <ul class="list-group">
+
+                            <li class="list-group-item">
+                                <a href="#">Consectetur adipiscing elit fusce vel.</a>
+                            </li>
+                            <li class="list-group-item">
+                                <a href="#">Sapien elit in malesuada semper.</a>
+                            </li>
+                            <li class="list-group-item">
+                                <a href="#">Mi, id sollicitudin urna fermentum.</a>
+                            </li>
+                            <li class="list-group-item">
+                                <a href="#">Ut fusce varius nisl ac.</a>
+                            </li>
+                            <li class="list-group-item">
+                                <a href="#">Ipsum gravida vel pretium tellus.</a>
+                            </li>
+
+                        </ul>
+                    </div>
+
+                    <div class="panel-footer text-center">
+                        <a href="#" class="btn btn-danger">
+                            <span class="glyphicon glyphicon-list-alt"></span>&nbsp;
+                            Tüm Yazılar
+                        </a>
+                    </div>
+
+                </div>
+
+            </div>
+
+        </div>
+
+    </div>
+
+    <div id="footer">
+        <div class="text-center">
+            Tüm hakları saklıdır.&copy;  @DateTime.Now.Year
+        </div>
+    </div>
+</body>
+</html>

@@ -1,0 +1,15 @@
+C:\Users\Nurullah\Desktop\ready\winDovizKurKaydedici\winDovizKurKaydedici\bin\Debug\winDovizKurKaydedici.exe.config
+C:\Users\Nurullah\Desktop\ready\winDovizKurKaydedici\winDovizKurKaydedici\obj\Debug\winDovizKurKaydedici.csprojResolveAssemblyReference.cache
+C:\Users\Nurullah\Desktop\ready\winDovizKurKaydedici\winDovizKurKaydedici\obj\Debug\winDovizKurKaydedici.Form1.resources
+C:\Users\Nurullah\Desktop\ready\winDovizKurKaydedici\winDovizKurKaydedici\obj\Debug\winDovizKurKaydedici.Properties.Resources.resources
+C:\Users\Nurullah\Desktop\ready\winDovizKurKaydedici\winDovizKurKaydedici\obj\Debug\winDovizKurKaydedici.csproj.GenerateResource.Cache
+C:\Users\Nurullah\Desktop\ready\winDovizKurKaydedici\winDovizKurKaydedici\bin\Debug\Chart.js
+C:\Users\Nurullah\Desktop\ready\winDovizKurKaydedici\winDovizKurKaydedici\bin\Debug\samples\line.html
+C:\Users\Nurullah\Desktop\ready\winDovizKurKaydedici\winDovizKurKaydedici\bin\Debug\winDovizKurKaydedici.exe
+C:\Users\Nurullah\Desktop\ready\winDovizKurKaydedici\winDovizKurKaydedici\bin\Debug\winDovizKurKaydedici.pdb
+C:\Users\Nurullah\Desktop\ready\winDovizKurKaydedici\winDovizKurKaydedici\bin\Debug\EntityFramework.dll
+C:\Users\Nurullah\Desktop\ready\winDovizKurKaydedici\winDovizKurKaydedici\bin\Debug\EntityFramework.SqlServer.dll
+C:\Users\Nurullah\Desktop\ready\winDovizKurKaydedici\winDovizKurKaydedici\bin\Debug\EntityFramework.xml
+C:\Users\Nurullah\Desktop\ready\winDovizKurKaydedici\winDovizKurKaydedici\bin\Debug\EntityFramework.SqlServer.xml
+C:\Users\Nurullah\Desktop\ready\winDovizKurKaydedici\winDovizKurKaydedici\obj\Debug\winDovizKurKaydedici.exe
+C:\Users\Nurullah\Desktop\ready\winDovizKurKaydedici\winDovizKurKaydedici\obj\Debug\winDovizKurKaydedici.pdb

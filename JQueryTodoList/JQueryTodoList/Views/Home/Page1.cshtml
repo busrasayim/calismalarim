@@ -1,0 +1,96 @@
+﻿
+@{
+    Layout = null;
+}
+
+<!DOCTYPE html>
+
+<html>
+<head>
+    <meta name="viewport" content="width=device-width" />
+    <title>Page1</title>
+    <script src="~/Scripts/jquery-2.2.0.min.js"></script>
+
+    <style>
+        .kutu {
+            width: 100px;
+            height: 100px;
+            display: block;
+            border: 3px solid #000;
+            margin:10px;
+            background-color:#ddd;
+        }
+
+        .kutu:first-child{
+            background-color:red;
+        }
+
+        .kutu:last-child{
+            background-color:blue;
+        }
+    </style>
+
+    <script>
+
+        $(function () {
+            //alert("Merhaba JQuery!");
+
+            $("p").click(function () {
+                $(this).hide(); // show(); toggle();
+            })
+
+            $(".kutu").click(function () {
+                $(this).fadeToggle();  // fadeIn(); fadeToggle();
+            })
+
+            $("#btnAcKapat").click(function () {
+                $(".kutu").fadeToggle(3000);
+            })
+
+            $(".texts input").focus(function () {
+                $(this).css("border-color", "red");
+            })
+
+            $(".texts input").blur(function () {
+                $(this).css("border-color", "");
+            })
+
+        })
+
+    </script>
+
+</head>
+<body>
+    <div>
+        <p>
+            1 Ipsum gravida vel pretium tellus tincidunt integer eu augue augue nunc elit dolor, luctus placerat scelerisque euismod, iaculis eu lacus nunc mi elit, vehicula ut.
+        </p>
+
+        <p>
+            2 Ipsum gravida vel pretium tellus tincidunt integer eu augue augue nunc elit dolor, luctus placerat scelerisque euismod, iaculis eu lacus nunc mi elit, vehicula ut.
+        </p>
+
+        <p>
+            3 Ipsum gravida vel pretium tellus tincidunt integer eu augue augue nunc elit dolor, luctus placerat scelerisque euismod, iaculis eu lacus nunc mi elit, vehicula ut.
+        </p>
+    </div>
+
+    <div>
+
+        <button type="button" id="btnAcKapat">Aç/Kapa</button>
+
+        @*.kutu*3>lorem3*@
+        <div class="kutu">Sit amet, consectetur.</div>
+        <div class="kutu">Adipiscing elit fusce.</div>
+        <div class="kutu">Vel sapien elit.</div>
+
+    </div>
+
+    <div class="texts">
+        <input type="text" value="" />
+        <input type="text" value="" />
+        <input type="text" value="" />
+    </div>
+
+</body>
+</html>

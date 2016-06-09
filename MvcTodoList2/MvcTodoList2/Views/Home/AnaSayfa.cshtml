@@ -1,0 +1,51 @@
+﻿@using MvcTodoList2.Models
+
+@model IEnumerable<TaskItem>
+
+@{
+    ViewBag.Title = "AnaSayfa";
+    Layout = "~/Views/Shared/_Layout1.cshtml";
+}
+
+<div class="row">
+
+    <div class="col-md-12">
+
+        <h2>Task List</h2>
+        <hr />
+
+        <p>
+            Bu sayfada tamamlanmamış görevlerinizi görebilirsiniz. İnceleyebilirsiniz..
+        </p>
+
+    </div>
+
+</div>
+
+<div class="row">
+
+    <div class="col-md-12">
+        @*ul.list-group>li.list-group-item*3>(button[type="button" class="btn btn-danger"]>{Sil})+(button[type="button" class="btn btn-warning"]>{Düzenle})+(button[type="button" class="btn btn-success"]>{Yapıldı})*@
+        <ul class="list-group">
+
+            @foreach (TaskItem item in Model)
+            {
+
+                <li class="list-group-item">
+
+                    @MyHelper.CreateActionLink("Home", "Delete", item.Id.ToString(), "Sil", "danger", "remove")
+                    @MyHelper.CreateActionLink("Home", "Edit", item.Id.ToString(), "Düzenle", "warning", "edit")
+                    @MyHelper.CreateActionLink("Home", "Completed", item.Id.ToString(), "Tamamlandı", "success", "ok")
+                    <span>
+                        @item.Description
+                    </span>
+
+                </li>
+
+            }
+
+        </ul>
+
+    </div>
+
+</div>

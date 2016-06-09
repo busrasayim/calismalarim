@@ -1,0 +1,50 @@
+﻿@using AcitanSozlukWeb.ViewModels
+@model ShowDetailViewModel
+
+@{
+    ViewBag.Title = "ShowDetail";
+    Layout = "~/Views/Shared/_Layout1.cshtml";
+}
+
+@{
+    string[] hashes = Model.HashTags.Split(';');
+
+    string discolorationForLike = (Model.IsLiked.HasValue && Model.IsLiked.Value) ? string.Empty : "discoloration05";
+    string discolorationForDislike = (Model.IsLiked.HasValue && !Model.IsLiked.Value) ? string.Empty : "discoloration05";
+}
+
+<div class="row">
+    <div class="col-md-12">
+        <h2>@Model.Title</h2>
+        <hr />
+    </div>
+</div>
+
+<div class="row">
+    <div class="col-md-6 article-info">
+        <span class="glyphicon glyphicon-user text-primary">&nbsp;</span>@(Model.OwnUser.Name + " " + Model.OwnUser.Surname + "(" + Model.OwnUser.Nickname + ")")<br />
+        <span class="glyphicon glyphicon-send text-warning">&nbsp;</span>@Model.PublishedOn.Value.ToShortDateString()
+    </div>
+    <div class="col-md-6 article-info text-right like-dislike">
+        @Model.LikedCount&nbsp;<a href="/Article/Like/@Model.Id" class="@discolorationForLike">
+            <span class="glyphicon glyphicon-thumbs-up text-success"></span>
+        </a>
+        <br />
+        @Model.DislikedCount&nbsp;<a href="/Article/Dislike/@Model.Id" class="@discolorationForDislike">
+            <span class="glyphicon glyphicon-thumbs-down text-danger"></span>
+        </a>
+    </div>
+    <div class="col-md-12">
+        <hr />
+        @Model.Description
+        <hr />
+    </div>
+    <div class="col-md-12">
+        @foreach (string hash in hashes)
+        {
+            <a href="/Article/HashTag/@hash.Replace("#","")" class="label label-success">@hash</a>
+        }
+    </div>
+</div>
+
+<script src="~/Scripts/like-dislike-ajax.js"></script>

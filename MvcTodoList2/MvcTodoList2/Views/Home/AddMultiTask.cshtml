@@ -1,0 +1,116 @@
+﻿@using MvcTodoList2.Models
+@model List<TaskItem>
+
+@{
+    ViewBag.Title = "AddMultiTask";
+    Layout = "~/Views/Shared/_Layout1.cshtml";
+}
+
+<h2>Add Multi Task</h2>
+<hr />
+
+@using (Html.BeginForm())
+{
+    <div class="row">
+
+        <div class="col-md-4 col-md-offset-4">
+
+            <div id="textbox_container" class="form-group">
+
+                @if (Model != null)
+                {
+
+                    for (int i = 0; i < Model.Count(); i++)
+                    {
+                        @Html.TextBoxFor(item => Model[i].Description, new { @class = "form-control", placeholder = "task detail" })
+                    }
+                }
+
+            </div>
+
+            <div class="form-group">
+
+                <input type="button" id="btnSave" value="Save" class="btn btn-success" />
+                <input type="button" id="btnAddTaskItem" value="Add New" class="btn btn-primary" />
+
+            </div>
+
+
+        </div>
+
+    </div>
+}
+<script>
+
+    $(function () {
+
+        var counter = 0;
+        var container = $("#textbox_container");
+        var btnAddNew = $("#btnAddTaskItem");
+        var btnSave = $("#btnSave");
+
+        function addNewTaskItemTextbox() {
+
+            var row = $("<div class='row'></div>");
+            var col1 = $("<div class='col-md-1'></div>");
+            var col11 = $("<div class='col-md-11'></div>");
+
+            row.css("padding-bottom", "5px");
+            col1.css("padding-top", "8px");
+            col1.css("padding-left", "5px");
+
+            row.append(col1);
+            row.append(col11);
+
+            var taskItemInput = $("<input></input>");
+            //taskItemInput.attr("name", "[" + counter + "].Description");
+            taskItemInput.attr("type", "text");
+            taskItemInput.attr("placeholder", "task detail");
+            taskItemInput.addClass("form-control");
+            col11.append(taskItemInput);
+
+            var removeLink = $("<a></a>");
+            removeLink.html("<span class='glyphicon glyphicon-remove'></span>");
+            removeLink.click(function () {
+                row.remove();
+            });
+            col1.append(removeLink);
+
+            container.append(row);
+
+        }
+
+        btnAddNew.click(function () {
+            addNewTaskItemTextbox();
+        });
+
+        btnSave.click(function () {
+            counter = 0;
+
+            var isValid = true;
+
+            container.find(".row .col-md-11 input").each(function () {
+                $(this).attr("name", "[" + counter + "].Description");
+                $(this).attr("style", "");
+                $(this).val($(this).val().trim());
+                counter++;
+
+                if ($(this).val() == null || $(this).val() == "undefined" || $(this).val() == "") {
+                    isValid = false;
+                    $(this).css({ "border-color": "#FB6F6F", "border-width": "2px", "box-shadow": "0 0 5px" });
+                }
+            });
+
+            if (isValid) {
+                $("form")[0].submit();
+            }
+            else {
+                alert("Task detail can not null or empty.");
+            }
+        });
+
+        addNewTaskItemTextbox();
+
+    })
+
+</script>

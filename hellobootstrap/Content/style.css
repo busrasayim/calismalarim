@@ -1,0 +1,23 @@
+﻿.btn-mor {
+  color: #fff;
+  background-color: #a27bc4;
+  border-color: #8d63b1;
+}
+.btn-mor:focus,
+.btn-mor.focus {
+  color: #fff;
+  background-color: #8b5cb4;
+  border-color: #512776;
+}
+.btn-mor:hover {
+  color: #fff;
+  background-color: #8b5cb4;
+  border-color: #6b3d94;
+}
+.btn-mor:active,
+.btn-mor.active,
+.open > .dropdown-toggle.btn-mor {
+  color: #fff;
+  background-color: #8b5cb4;
+  border-color: #6b3d94;
+}

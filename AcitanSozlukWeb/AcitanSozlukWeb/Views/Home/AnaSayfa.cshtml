@@ -1,0 +1,112 @@
+﻿@using AcitanSozlukWeb.ViewModels
+@using AcitanSozlukWeb.Models
+
+@model HomePageViewModel
+@{
+    ViewBag.Title = "AnaSayfa";
+    Layout = "~/Views/Shared/_Layout1.cshtml";
+}
+
+<div class="row">
+
+    <div class="col-md-12">
+        <h1 class="text-uppercase text-center">
+            Acıtan Sözlük
+        </h1>
+        <hr />
+        <h4 class="text-center">
+            Hayat acıtır ama bu sözlük daha fazla acıtır, hayaın tüm gerçekleri hiç bu kadar acı olmamıştı. Gelin hep beraber bu acıları paylaşalım..
+        </h4>
+        <hr />
+    </div>
+
+    <div class="col-md-6 col-md-offset-3 text-center">
+
+        <div class="form-group">
+            <input type="text" placeholder="yazılarda ara.." class="form-control input-lg" />
+        </div>
+
+        <div class="form-group">
+            <button class="btn btn-success btn-lg">
+                <span class="glyphicon glyphicon-search"></span>&nbsp;
+                Ara
+            </button>
+        </div>
+
+    </div>
+
+</div>
+
+<div class="row">
+
+    @foreach (Article art in Model.Articles)
+    {
+        <div class="col-md-4">
+
+            <div class="panel panel-success">
+
+                <div class="panel-heading article-heading">
+                    <span>
+                        @art.Title
+                    </span>
+                </div>
+
+                <div class="panel-body">
+                    <p class="article-content">
+                        @art.Summary
+                    </p>
+
+                    <div class="text-center">
+                        <a href="/Article/ShowDetail/@art.Id" class="btn btn-default">
+                            <span class="glyphicon glyphicon-arrow-right"></span>&nbsp;
+                            Devamı..
+                        </a>
+                    </div>
+                </div>
+
+                <div class="panel-footer article-footer">
+
+                    <div class="row">
+
+                        <div class="col-md-9">
+
+                            @{
+                                string[] hashes = art.HashTags.Split(';');
+                                bool isLiked = Model.LikedArticleIds.Contains(art.Id);
+                                bool isDislike = Model.DislikedArticleIds.Contains(art.Id);
+
+                                string discolorationForLike = (isLiked) ? string.Empty : "discoloration05";
+                                string discolorationForDislike = (isDislike) ? string.Empty : "discoloration05";
+                            }
+
+                            @foreach (string hash in hashes)
+                            {
+                            <a href="/Article/HashTag/@hash.Replace("#","")" class="label label-success">@hash</a>
+                            }
+
+                        </div>
+
+                        <div class="col-md-3 text-right like-dislike">
+
+                            <a href="/Article/Like/@art.Id" class="hint--left hint--success @discolorationForLike" data-hint="@art.LikedCount">
+                                <span class="glyphicon glyphicon-thumbs-up text-success"></span>
+                            </a>
+                            &nbsp;&nbsp;
+                            <a href="/Article/Dislike/@art.Id" class="hint--right hint--error @discolorationForDislike" data-hint="@art.DislikedCount">
+                                <span class="glyphicon glyphicon-thumbs-down text-danger"></span>
+                            </a>
+
+                        </div>
+
+                    </div>
+                </div>
+
+            </div>
+
+
+        </div>
+                                }
+
+</div>
+
+<script src="~/Scripts/like-dislike-ajax.js"></script>

@@ -1,0 +1,185 @@
+﻿@using AcitanSozlukWeb.ViewModels
+@model LoginPageViewModel
+
+@{
+    ViewBag.Title = "Login";
+    Layout = "~/Views/Shared/_Layout1.cshtml";
+}
+
+<h2>Login</h2>
+<hr />
+
+@using (Html.BeginForm("Login", "Login"))
+{
+    <div id="login" class="row">
+
+        <div class="col-md-6 col-md-offset-3">
+
+            <div class="form-group">
+                <div class="col-md-9 col-md-offset-2">
+                    @Html.ValidationSummary("", new { id = "validation_summary", @class = "alert alert-danger" })
+                </div>
+            </div>
+
+
+            <div class="form-group">
+
+                <label class="control-label col-md-4">
+                    @Html.DisplayNameFor(x => x.Nickname)
+                </label>
+
+                <div class="col-md-8">
+                    @Html.TextBoxFor(x => x.Nickname, new { @class = "form-control", placeholder = "Kullanıcı Adı" })
+                </div>
+
+            </div>
+
+            <div class="form-group">
+
+                <label class="control-label col-md-4">
+                    @Html.DisplayNameFor(x => x.Password)
+                </label>
+
+                <div class="col-md-8">
+                    @Html.PasswordFor(x => x.Password, new { @class = "form-control", placeholder = "Şifre" })
+                </div>
+
+            </div>
+
+            <div class="form-group">
+
+                <div class="col-md-5 col-md-offset-4">
+                    <div class="input-group">
+                        <span class="input-group-addon">
+                            @Html.CheckBoxFor(x => x.RememberMe)
+                        </span>
+                        <input type="text" class="form-control" readonly="readonly" value="@Html.DisplayNameFor(x => x.RememberMe)" />
+                    </div>
+                </div>
+
+                <div class="col-md-3 text-right">
+                    <button type="submit" id="btnLogin" class="btn btn-success">
+                        <span class="glyphicon glyphicon-log-in"></span>&nbsp;
+                        Login
+                    </button>
+                </div>
+
+            </div>
+
+            @*@if (ViewBag.Hata != null)
+                {
+                    <div class="form-group">
+                        <div class="col-md-9 col-md-offset-3">
+                            <br />
+                            <span class="alert alert-danger" role="alert">
+                                @ViewBag.Hata
+                            </span>
+
+                        </div>
+                    </div>
+                }*@
+
+            @if (Model.HasError)
+            {
+                <div class="form-group">
+                    <div class="col-md-9 col-md-offset-3">
+                        <br />
+                        <span class="alert alert-danger" role="alert">
+                            @Model.ErrorMessage
+                        </span>
+
+                    </div>
+                </div>
+            }
+
+        </div>
+
+    </div>
+}
+
+@using (Html.BeginForm("RememberPassword", "Login"))
+{
+    <div id="forget_password" class="row">
+
+        <div class="col-md-6 col-md-offset-3">
+
+            <div class="form-group">
+                <hr />
+            </div>
+
+            <p class="text-center text-primary">
+                Şifrenizi unuttuysanız, bir zahmet aşağıya e-posta adresinizi yazarsanız, bir bakarız olmadı göndeririz yeni bir şifre, sizde ilk girişinizde değiştirirsiniz.
+            </p>
+
+            <div class="form-group">
+                <div class="col-md-12">
+                    @Html.TextBoxFor(x => x.EmailAddress, new { @class = "form-control", placeholder = "e-posta adresiniz" })
+                </div>
+            </div>
+
+            <div class="form-group">
+                <div class="col-md-12 text-center">
+                    <button type="submit" class="btn btn-primary">
+                        <span class="glyphicon glyphicon-envelope"></span>&nbsp;
+                        Şifremi Hatırlat!
+                    </button>
+                </div>
+            </div>
+
+            @if (Model.HasError)
+            {
+                <div class="form-group">
+                    <div class="col-md-9 col-md-offset-3">
+                        <br />
+                        <span class="alert alert-danger" role="alert">
+                            @Model.ErrorMessage
+                        </span>
+
+                    </div>
+                </div>
+            }
+
+            @if (string.IsNullOrEmpty(Model.SuccessMessage) == false)
+            {
+                <div class="form-group">
+                    <div class="col-md-8 col-md-offset-2">
+                        <br />
+                        <span class="alert alert-success" role="alert">
+                            @Model.SuccessMessage
+                        </span>
+
+                    </div>
+                </div>
+            }
+
+
+        </div>
+
+    </div>
+}
+
+
+
+<script>
+
+    $(function () {
+
+        //var li = $(".validation-summary-valid > ul > li:first");
+
+        if ($(".validation-summary-valid") != null) {
+            $(".validation-summary-valid").removeClass("alert");
+            $(".validation-summary-valid").removeClass("alert-danger");
+        }
+
+        $("#validation_summary").on("DOMNodeInserted", function () {
+
+            if ($(".validation-summary-errors") != null) {
+                $(".validation-summary-errors").addClass("alert");
+                $(".validation-summary-errors").addClass("alert-danger");
+            }
+
+        });
+
+    })
+
+</script>

@@ -1,0 +1,9 @@
+C:\Users\Nurullah\Desktop\ready\winTodoList\winTodoList\bin\Debug\winTodoList.exe.config
+C:\Users\Nurullah\Desktop\ready\winTodoList\winTodoList\bin\Debug\winTodoList.exe
+C:\Users\Nurullah\Desktop\ready\winTodoList\winTodoList\bin\Debug\winTodoList.pdb
+C:\Users\Nurullah\Desktop\ready\winTodoList\winTodoList\obj\Debug\winTodoList.csprojResolveAssemblyReference.cache
+C:\Users\Nurullah\Desktop\ready\winTodoList\winTodoList\obj\Debug\winTodoList.Form1.resources
+C:\Users\Nurullah\Desktop\ready\winTodoList\winTodoList\obj\Debug\winTodoList.Properties.Resources.resources
+C:\Users\Nurullah\Desktop\ready\winTodoList\winTodoList\obj\Debug\winTodoList.csproj.GenerateResource.Cache
+C:\Users\Nurullah\Desktop\ready\winTodoList\winTodoList\obj\Debug\winTodoList.exe
+C:\Users\Nurullah\Desktop\ready\winTodoList\winTodoList\obj\Debug\winTodoList.pdb

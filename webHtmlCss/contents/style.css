@@ -1,0 +1,196 @@
+﻿.koyumavi {
+    color: #010626;
+}
+
+.ortamavi {
+    color: #223A59;
+}
+
+.acikmavi {
+    color: #547C8C;
+}
+
+.gri {
+    color: #D8D9D0;
+}
+
+.gumus {
+    color: #F0F2DF;
+}
+
+.bg_koyumavi {
+    background-color: #010626;
+    border-color: #547C8C;
+}
+
+.bg_ortamavi {
+    background-color: #223A59;
+    border-color: #010626;
+}
+
+.bg_acikmavi {
+    background-color: #547C8C;
+    border-color: #010626;
+}
+
+.bg_gri {
+    background-color: #D8D9D0;
+    border-color: #547C8C;
+}
+
+.bg_gumus {
+    background-color: #F0F2DF;
+    border-color: #547C8C;
+}
+
+#header > h1, #header > h4, #header > img {
+    float: left;
+}
+
+#header > h4 {
+    padding-top: 15px;
+    padding-left: 10px;
+}
+
+#header > img {
+    float: right;
+    -moz-transition: all 0.5s linear;
+    -o-transition: all 0.5s linear;
+    -webkit-transition: all 0.5s linear;
+    transition: all 0.5s linear;
+}
+
+    #header > img:hover {
+        -moz-transform: scaleX(1.2) scaleY(1.2) rotateZ(45deg);
+        -ms-transform: scaleX(1.2) scaleY(1.2) rotateZ(45deg);
+        -o-transform: scaleX(1.2) scaleY(1.2) rotateZ(45deg);
+        -webkit-transform: scaleX(1.2) scaleY(1.2) rotateZ(45deg);
+        transform: scaleX(1.2) scaleY(1.2) rotateZ(45deg);
+    }
+
+.clear {
+    clear: both;
+}
+
+#nav > ul li {
+}
+
+#nav .menu {
+    list-style-type: none;
+}
+
+    #nav .menu li {
+        float: left;
+        margin-left: 15px;
+        margin-bottom: 15px;
+        border-width: 2px;
+        border-style: solid;
+        padding: 15px;
+        border-radius: 5px;
+        -moz-transition: all 0.5s linear;
+        -o-transition: all 0.5s linear;
+        -webkit-transition: all 0.5s linear;
+        transition: all 0.5s linear;
+    }
+
+        #nav .menu li:hover {
+            box-shadow: 5px 5px 10px #223A59;
+            -moz-transform: rotateY(30deg) rotateX(15deg) scaleX(1.5) scaleY(1.5);
+            -ms-transform: rotateY(30deg) rotateX(15deg) scaleX(1.5) scaleY(1.5);
+            -o-transform: rotateY(30deg) rotateX(15deg) scaleX(1.5) scaleY(1.5);
+            -webkit-transform: rotateY(30deg) rotateX(15deg) scaleX(1.5) scaleY(1.5);
+            transform: rotateY(30deg) rotateX(15deg) scaleX(1.5) scaleY(1.5);
+        }
+
+        #nav .menu li a {
+            text-decoration: none;
+            text-transform: uppercase;
+        }
+
+
+#footer > div {
+    width: 200px;
+    display: inline-block;
+}
+
+.footer_right {
+    float: right;
+}
+
+.footer_center {
+    margin-left: 25%;
+    margin-right: 25%;
+}
+
+.kategoriler {
+    width: 25%;
+    display: inline-block;
+}
+
+    .kategoriler > ul {
+        list-style-type: none;
+    }
+
+        .kategoriler > ul li:hover {
+            background-color: #c4e6ff;
+        }
+
+.kat_resim, .kat_detay {
+    display: inline-block;
+    margin-right: 10px;
+    vertical-align: top;
+}
+
+    .kat_detay a {
+        text-decoration: none;
+        color: #000000;
+        font-size: large;
+        font-weight: bold;
+        text-transform: capitalize;
+    }
+
+    .kat_detay p {
+        margin: 0;
+        font-size: smaller;
+    }
+
+.haber {
+    vertical-align: top;
+    padding-top: 30px;
+    width: 70%;
+    display: inline-block;
+}
+
+.haber_detay > img, .haber_detay > div {
+    display: inline-block;
+}
+
+.haber_detay > div {
+    vertical-align: top;
+    margin-left: 20px;
+    width: 70%;
+}
+
+.haber_yorum > ul > li > img, .haber_yorum > ul > li > div {
+    display: inline-block;
+}
+
+.haber_yorum > ul {
+    list-style-type: none;
+}
+
+    .haber_yorum > ul li {
+        margin: 10px;
+    }
+
+        .haber_yorum > ul li > div {
+            width: 70%;
+        }
+
+            .haber_yorum > ul li > div p {
+                margin: 0;
+            }
+
+.haber_yorum .cevap {
+    padding-left: 40px;
+}
